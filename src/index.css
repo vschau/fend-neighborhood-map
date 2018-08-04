@@ -1,0 +1,145 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+html,
+body,
+main,
+#root,
+.container {
+  height: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+h1 {
+  font-size: 1.4em;
+  color: #ddd;
+  margin: 15px auto 5px auto;
+}
+
+/* Map style */
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: grey;
+}
+
+.leaflet-top {
+  position: relative;
+  float: right;
+  margin: auto 10px auto auto;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* List panel style */
+.search-input {
+  line-height: 1.3em;
+  width: 90%;
+}
+
+.sliding-panel {
+  background: #3e3e3e;
+  color: #ddd;
+  border: 1px solid #3e3e3e;
+  border-radius: 5px;
+  line-height: 30px;
+  padding: 0px 17px 10px 17px;
+  text-align: left;
+  width: 320px;
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+  transform: translateX(0px);
+  transition: transform 0.3s;
+}
+
+.sliding-panel ul {
+  list-style-type: none;
+  margin: 5px 0 0 0;
+  padding: 0;
+  line-height: 2em;
+}
+
+.sliding-panel li {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sliding-panel li:hover {
+  background: #1395ba;
+  border-color: #1395ba;
+}
+
+.sliding-panel.hidden {
+    transform: translateX(-320px);
+    top: auto;
+    overflow: hidden;
+}
+
+/* Control For Sliding Panel style */
+.control-panel {
+  height: 50px;
+  width: 22px;
+  background: #3e3e3e;
+  color: #ddd;
+  margin: 10px auto auto 320px;
+  float: left;
+  border: 1px solid #999;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  z-index: 1001;
+  transition: all 0.3s;
+}
+
+.control-panel.move-left {
+  transform: translateX(-320px);     
+}
+
+/* Popup style */
+.popup-content {
+  max-width: 200px;
+}
+
+.popup-content h2 {
+  font-size: 1em;
+  margin: auto auto 0 auto;
+}
+
+.popup-content ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.restaurant-photo {
+  max-height: 150px;
+}
+
+/* Marker style */
+.leaflet-marker-icon.hide,
+.leaflet-marker-shadow.hide
+{
+  display: none;
+}
